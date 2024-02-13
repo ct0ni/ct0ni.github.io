@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Otomads Hub软件</title>
+    <link rel="stylesheet" href="../css/software.css">
+    <link rel="icon" href="../ico/software.svg">
+    <script src="../js/jquery-3.4.1.js" defer></script>
+    <script src="../js/software.js" defer></script>
+</head>
+<!--
+-->
+<body>
+    <header>
+        <h1 class="h" style="position:fixed;z-index:9999;top:0;">
+            <!--        <ul>-->
+                <a href="./" class='head' id='logo'>Community</a>
+                <a href="./software/software.html" class="head">软件</a>
+                <a href="./article/article.html" class="head">文章</a>
+                <a href="./sound/sound.html" class="head">乐曲</a>
+            <!--        </ul>-->
+        </h1>
+        <a class="return" href="../index.html" target="_blank">⏎退回主页</a>
+        <!--        <ul>-->
+
+        <!--        </ul>-->
+        <!--    </nav>-->
+        <h1 class="title">项目实例</h1>
+        <h2 class="title2"></h2>
+    </header>
+    <style type="text/css">
+        #archives-temp h3,
+        #comments-navi a.next,
+        #comments-navi a.prev,
+        #pagination a:hover,
+        .author-profile i,
+        .comment h4 a,
+        .comment h4 a:hover,
+        .entry-content a:hover,
+        .entry-title a:hover,
+        .float-content i:hover,
+        .post-content a:hover,
+        .post-like a,
+        .post-more i:hover,
+        .post-share .show-share,
+        .site-info a:hover,
+        .site-title a:hover,
+        .site-top ul li a:hover,
+        .sorry li a:hover,
+        .sub-text,
+        .we-info a,
+        i.iconfont.js-toggle-search.iconsearch:hover,
+        span.page-numbers.current,
+        span.sitename {
+            color: #fbff00a6;
+        }
+
+        .ar-time i,
+        .comment .comment-reply-link,
+        .download,
+        .feature i,
+        .links ul li:before,
+        .navigator i:hover,
+        .object,
+        .siren-checkbox-radio:checked+.siren-checkbox-radioInput:after,
+        ::selection,
+        span.ar-circle {
+            background: #fbff00;
+        }
+
+        #pagination a:hover,
+        .download,
+        .form-submit .submit:hover,
+        .link-title,
+        .links ul li:hover,
+        .navigator i:hover {
+            border-color: #fbff00;
+        }
+
+        .notification:hover,
+        .meme_btn:hover,
+        .meme_body,
+        .meme_popup .meme_btn {
+            border: 1px solid #fbff00;
+        }
+
+        .meme_popup .meme_btn {
+            color: #fbff00;
+        }
+
+        #comments_edit:focus,
+        .comment-respond input:focus,
+        .search-form input:focus {
+            border: 1px solid #fbff00;
+            box-shadow: 0 0 10px 0 #fbff00;
+        }
+
+        #mo-nav .m-search input:focus {
+            box-shadow: 0 0 10px 0 #fbff00;
+        }
+
+        .linkpage li:hover {
+            box-shadow: 0 0 10px #fbff00;
+            -moz-box-shadow: 0 0 10px #fbff00;
+            -webkit-box-shadow: 0 0 10px #fbff00;
+        }
+
+        ol.children .comment .contents {
+            border-left: 3px solid #fbff00;
+        }
+
+        #comments_edit {
+            -webkit-user-modify: read-write-plaintext-only;
+            -moz-user-modify: read-write-plaintext-only;
+        }
+
+        header.page-header,
+        .entry-header {
+            display: none;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            will-change: transform;
+            z-index: -1;
+            background-image: url('../picture/HomePage_CenterBackground.jpg');
+            background-repeat: no-repeat;
+            background-position: top right;
+            background-size: cover;
+            -moz-filter: blur(10px) brightness(.88);
+            -webkit-filter: blur(10px) brightness(.88);
+            -o-filter: blur(10px) brightness(.88);
+            -ms-filter: blur(10px) brightness(.88);
+            filter: blur(10px) brightness(.88);
+        }
+
+        .pattern-center {
+            max-width: 800px;
+            margin: auto;
+            margin-top: 75px;
+        }
+
+        .pattern-center::before {
+            z-index: 1;
+        }
+
+        .pattern-center::after {
+            z-index: 2;
+        }
+
+        .pattern-center header.single-header {
+            text-align: center;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .single-center .entry-census span img {
+            float: none;
+            vertical-align: middle;
+        }
+
+        #content,
+        .notification,
+        .comments .comments-main,
+        .info-meta,
+        .notice {
+            background: rgba(255, 255, 255, .53);
+        }
+
+        .notification span {
+            color: #6F6F6F;
+        }
+
+        .info-meta {
+            border-radius: 8px;
+            border: none;
+        }
+
+        .info-meta a,
+        .info-meta span {
+            color: #6F6F6F;
+        }
+
+        #content,
+        .comments .comments-main {
+            border-radius: 0 0 10px 10px;
+        }
+        .meme_btn,
+        .form-submit .submit,
+        #comments_edit,
+        .notification,
+        #pagination a {
+            border: 1px solid #545454;
+        }
+
+        .author-profile p {
+            border-top: 1px solid #545454;
+            border-bottom: 1px solid #545454;
+        }
+
+        .post-footer {
+            border-bottom: 1px dashed #545454;
+            border-top: 1px dashed #545454;
+        }
+
+        .single-center::before {
+            background: rgba(0, 0, 0, 0);
+        }
+
+        .single-center .entry-census {
+            padding: 8px 0;
+        }
+
+        .headertop-bar::after,
+        .pattern-center::after,
+        .comments,
+        .site-footer {
+            background: none;
+        }
+
+        .pattern-center .pattern-attachment-img {
+            -webkit-transition: -webkit-transform .5s ease-out;
+            -webkit-transition: transform .5s ease-out;
+            transition: transform .5s ease-out;
+        }
+
+        .pattern-center:hover .pattern-attachment-img {
+            -webkit-transform: scale(1.07);
+            transform: scale(1.07);
+            -ms-transform: scale(1.07);
+        }
+
+        .headertop::before {
+            position: unset;
+        }
+
+        .linkpage li {
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        .linkpage li a p {
+            color: #ddd;
+        }
+
+        @media (max-width: 860px) {
+            body::before {
+                background-image: none;
+            }
+
+            .headertop-bar::after,
+            .pattern-center::after {
+                background: #fff !important;
+            }
+
+            .centerbg {
+                background-image: url('./picture/HomePage_CenterBackground.jpg') !important;
+            }
+
+            .pattern-center header.single-header {
+                text-align: left !important;
+                bottom: 20px !important;
+                background: rgba(0, 0, 0, 0) !important;
+            }
+
+            .single-center .entry-census {
+                padding: 18px 0 0 !important;
+            }
+
+            .pattern-center {
+                margin-top: 0;
+            }
+
+            .single-center::before {
+                background: rgba(0, 0, 0, .3);
+            }
+
+            .headertop::before {
+                position: absolute;
+            }
+
+            .linkpage li {
+                background-color: #fff;
+            }
+
+            .linkpage li a p {
+                color: #bbc;
+            }
+
+        }
+    </style>
+    <h1 class="st">项目实例</h1>
+    <div class="search_box">
+        <input type="text" placeholder="请输入要搜索的程序">
+        <div class="sb"><img src="../ico/search.svg" width="20px" height="20px"></div>
+    </div>
+    <section>
+        <ul>
+            <li id="networksecurity">网络安全类</li>
+            <li class="hide" id="networksecurityli">
+                <ul class="c">
+                    <li><a href="https://wangrenlin.top/pages/article/ccattack.html" target="_blank">简易CC攻击</a></li>
+                    <li><a href="../404/404.html" target="_blank">简易SSH爆破</a></li>
+                    <li><a href="../404/404.html" target="_blank">验证码爆破</a></li>
+                </ul>
+            </li>
+            <li id='spider'>爬虫类</li>
+            <li class="hide" id="spiderli">
+                <ul class="c">
+                    <li><a href="../404/404.html" target="_blank">古诗文爬虫</a></li>
+                    <li><a href="../404/404.html" target="_blank">猫图爬虫</a></li>
+                    <li><a href="../404/404.html" target="_blank">代理ip爬虫</a></li>
+                    <li><a href="../404/404.html" target="_blank">有道翻译爬虫</a></li>
+                    <li><a href="../404/404.html" target="_blank">实时疫情爬虫</a></li>
+                    <li><a href="../404/404.html" target="_blank">汇率爬虫</a></li>
+                </ul>
+            </li>
+            <li id="gui">GUI程序类</li>
+            <li class="hide" id="guili">
+                <ul class="c">
+                    <li><a href="../404/404.html" target="_blank">有道翻译爬虫</a></li>
+                    <li><a href="../404/404.html" target="_blank">简易计算器</a></li>
+                    <li><a href="../404/404.html" target="_blank">王任林快搜</a></li>
+                    <li><a href="../404/404.html" target="_blank">计算机教室控制软件破解</a></li>
+                </ul>
+            </li>
+            <li id="web">前端类</li>
+            <li class="hide" id="webli">
+                <ul class="c">
+                    <li><a href="../404/404.html" target="_blank">本站的代码实现</a></li>
+                </ul>
+            </li>
+            <li id="game">游戏类</li>
+            <li class="hide" id="gameli">
+                <ul class="c">
+                    <li><a href="../404/404.html" target="_blank">接球游戏</a></li>
+                    <li><a href="../404/404.html" target="_blank">飞机大战</a></li>
+                    <li><a href="../404/404.html" targe-t="_blank">井字棋</a></li>
+                    <li><a href="../404/404.html" target="_blank">石头剪刀布</a></li>
+                </ul>
+            </li>
+            <li id="auto">自动化</li>
+            <li class="hide" id="autoli">
+                <ul class="c">
+                    <li><a href="../404/404_Law.html" target="_blank">bilibili刷播放</a></li>
+                    <li><a href="../404/404.html" target="_blank">筛选代理ip</a></li>
+                    <li><a href="../404/404.html" target="_blank">QQ自动撤回</a></li>
+                    <li><a href="../404/404.html" target="_blank">明日方舟自动刷资源</a></li>
+                    <li><a href="../404/404.html" target="_blank">吔雄本色</a></li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+    <footer>本页面由Otomads Hub编写 Otomads Hub版权所有</footer>
+</body>
+
+</html>

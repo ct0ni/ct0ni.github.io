@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <desc>Created with Lunacy</desc>
+  <g id="Home-icon">
+    <path d="M0 0L48 0L48 48L0 48L0 0Z" id="Background" fill="none" stroke="none" />
+    <path d="M36 33L0 33L0 17L18 0L36 17L36 33Z" transform="translate(6 6)" id="Shape" fill="#EEEDE9" stroke="none" />
+    <path d="M28 7L33 12L33 0L28 0L28 7ZM36 30L0 30L0 35L36 35L36 30Z" transform="translate(6 9)" id="Shape" fill="#E8E9F3" fill-rule="evenodd" stroke="none" />
+    <path d="M20 0L0 18.6L2 20.8L20 4.1L38 20.8L40 18.6L20 0Z" transform="translate(4 4.299988)" id="Shape" fill="#E6E6E6" stroke="none" />
+    <path d="M0 0L12 0L12 16L0 16L0 0Z" transform="translate(18 28)" id="Shape" fill="#FFFFFF" stroke="none" />
+    <path d="M0 0L6 0L6 6L0 6L0 0Z" transform="translate(21 17)" id="Shape" fill="#C1C1C1" stroke="none" />
+    <path d="M0.5 0C0.200001 0 0 0.200001 0 0.5L0 2.5C0 2.8 0.200001 3 0.5 3C0.799999 3 1 2.8 1 2.5L1 0.5C1 0.200001 0.799999 0 0.5 0L0.5 0Z" transform="translate(27 35.5)" id="Shape" fill="#DAD9D9" stroke="none" />
+  </g>
+</svg>

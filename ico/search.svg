@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="23px" height="23px" viewBox="0 0 23 23" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <desc>Created with Lunacy</desc>
+  <g id="Group-2" transform="translate(1.5 1.5)">
+    <g id="Group">
+      <path d="M0 7.56302C0 3.38608 3.41478 0 7.62712 0C11.8395 0 15.2542 3.38608 15.2542 7.56302C15.2542 11.74 11.8395 15.126 7.62712 15.126C3.41478 15.126 0 11.74 0 7.56302Z" transform="translate(4.745758 0)" id="Ellipse" fill="none" stroke="#808080" stroke-width="3" />
+      <path d="M6.77966 0L0 6.72269" transform="translate(0 13.27731)" id="Line" fill="none" stroke="#808080" stroke-width="3" />
+    </g>
+  </g>
+</svg>

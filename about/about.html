@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="cn"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>关于鱼肉香肠代码研究所</title>
+    <link rel="stylesheet" href="../css/about.css">
+    <link rel="icon" href="../ico/icon_n.png">
+</head>
+
+<body>
+    <header>
+        <h1 class="h" style="position:fixed;z-index:9999;top:0;">
+            <!--        <ul>-->
+            <a href="../bbs/bbs.html" id="logo">LOGO</a>
+            <a href="../index.html" class="head">首页</a>
+            <a href="../software/software.html" class="head">项目实例</a>
+            <a href="../sound/sound.html" class="head">文件</a>
+            <!--        </ul>-->
+        </h1>
+        <a class="return" href="../index.html" target="_blank">返回首页</a>
+        <!--    <nav>-->
+        <!--        <ul>-->
+
+        <!--        </ul>-->
+        <!--    -->
+    </header>
+    <h1 class="st">关于本站:</h1>
+    <section>
+        <div id="box">
+            <h1>关于站长</h1>
+        <p>我是Origin Senpai,也就是本站的站长.关于我其实也没什么,我就是一个十分普通的学生,普通的家庭,</p>
+            <div class="about">
+                <figure>
+            </ul>
+        <audio src="thanks.mp3" controls="controls" id="music1" hidden="true"autoplay>
+        </audio>
+        <input style="position:fixed;z-index:9999;right:0;bottom:10px;width:130px;height:30px;}" class="return" type="button" value="播放/暂停BGM" onclick="bofang()">
+        <script>
+            function bofang(){//你马
+                var audio = document.getElementById('music1');
+                if(audio!==null){//判断是否获得该元素
+                    if(audio.paused){//获取音频の状态,这个属性应该是是否是暂停状态,如果是就播放,如果不是暂停就暂停
+                        audio.play();
+                    }else{
+                        audio.pause();
+                    }
+                }
+            }
+        </script>
+    </div>
+    </section>
+    <footer><marquee direction="left">本页面由北柊编写,北柊版权所有Copyright © 2019-2020 Beizhong All rights Reserved.</footer>
+</body></html>
