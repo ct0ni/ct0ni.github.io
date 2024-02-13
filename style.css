@@ -575,4 +575,26 @@ li>a:hover{
         display:none;
     }
 
+    body::before {
+        content: '';
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        will-change: transform;
+        z-index: -1;
+        background-image: url('./picture/HomePage_CenterBackground.jpg');
+         /*url('')这里面的图片可以随便更改*/
+        background-repeat: no-repeat;
+        background-position: top right;
+        background-size: cover;
+        -moz-filter: blur(10px) brightness(.88);
+        -webkit-filter: blur(10px) brightness(.88);
+        -o-filter: blur(10px) brightness(.88);
+        -ms-filter: blur(10px) brightness(.88);
+        filter: blur(10px) brightness(.88);
+    }
+    /*body::before的意思是后面的背景*/
+
 }
