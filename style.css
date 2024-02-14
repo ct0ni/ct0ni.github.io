@@ -6,7 +6,7 @@
 
 header {
     background-color: rgba(0, 0, 0, 0.13);
-    background-image: url(./picture/Title_Main_Page.svg);
+    background-image: url(./picture/titleMainPage.svg);
     padding: 0;
     height: 400px;
     background-position: center;
@@ -584,7 +584,7 @@ li>a:hover{
         left: 0;
         will-change: transform;
         z-index: -1;
-        background-image: url('./picture/HomePage_CenterBackground.jpg');
+        background-image: url('./picture/homePageCenterBackground.jpg');
          /*url('')这里面的图片可以随便更改*/
         background-repeat: no-repeat;
         background-position: top right;
