@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="304px" height="53px" viewBox="0 0 304 53" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB" id="filter_1">
+      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 128 0" result="hardAlpha" />
+      <feOffset dx="2" dy="2" />
+      <feGaussianBlur stdDeviation="2" />
+      <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+      <feColorMatrix type="matrix" values="0 0 0 0 0.39215687 0 0 0 0 0.39215687 0 0 0 0 0.39215687 0 0 0 0.49803922 0" />
+      <feBlend mode="normal" in2="shape" result="effect0_innerShadow" />
+    </filter>
+    <g transform="translate(0, 3.6)" id="path_1">
+      <path d="M28.71 9.21L28.71 6.54L12.66 6.54L14.07 2.01L11.37 0.9C10.89 3.03 10.32 4.92 9.78 6.54L1.14 6.54L1.14 9.21L8.76 9.21Q6.78 13.485 4.89 16.32C4.74 16.53 4.68 16.71 4.68 16.89C4.68 17.13 4.83 17.34 5.1 17.49L14.04 22.23C10.83 24.15 6.48 25.47 1.11 26.07L2.16 28.89C8.37 27.81 13.17 26.01 16.53 23.55L26.91 29.01L28.86 26.64L18.69 21.6C21.6 18.3 23.22 14.13 23.46 9.21L28.71 9.21ZM8.37 16.47Q8.1 16.335 8.1 16.2C8.1 16.14 8.13 16.05 8.19 15.99C9.72 13.59 10.89 11.31 11.67 9.21L20.76 9.21C20.46 13.95 18.99 17.73 16.35 20.43L8.37 16.47ZM33.75 15.15C35.16 13.8 36.24 12.3 36.84 10.62L39.81 10.62L39.81 14.55L42.24 14.55L42.24 1.05L39.81 1.05L39.81 4.44L35.94 4.44Q35.31 4.44 35.31 3.81L35.31 1.62L32.88 1.62L32.88 5.49C32.88 6.27 33.27 6.63 33.99 6.63L39.81 6.63L39.81 8.43L31.35 8.43L31.35 10.62L34.35 10.62C33.78 11.76 32.97 12.78 31.95 13.68L33.75 15.15ZM44.13 10.71L44.13 13.02L57.54 13.02L57.54 10.71L51.9 10.71L51.9 6.69L57.75 6.69L57.75 4.38L51.9 4.38L51.9 1.05L49.35 1.05L49.35 4.38L43.68 4.38L43.68 6.69L49.35 6.69L49.35 10.71L44.13 10.71ZM57.99 18.18L57.99 15.87L46.26 15.87L46.26 13.92L43.74 13.92L43.74 15.87L31.95 15.87L31.95 18.18L40.83 18.18C38.04 19.98 35.46 21.18 33.15 21.69L30.9 22.14L31.71 24.57C33.9 24.15 36.18 23.4 38.46 22.35L38.46 25.98L34.44 26.37L35.13 28.86C39.72 28.41 43.68 27.57 46.95 26.52L46.05 24.15C44.82 24.66 43.23 25.08 41.28 25.47L41.01 25.56L41.01 20.97L41.49 20.64L44.43 18.33C46.35 23.31 50.52 26.76 56.91 28.71L57.84 28.95L58.98 26.64C55.92 25.92 53.55 24.99 51.9 23.85Q54.42 22.365 56.13 20.97L54.72 18.93C53.52 19.92 51.87 21 49.8 22.2C48.24 20.49 47.64 19.8 47.04 18.18L57.99 18.18Z" />
+    </g>
+    <path d="M0 0L300 0L300 49L0 49L0 0Z" id="path_2" />
+    <clipPath id="clip_1">
+      <use xlink:href="#path_2" clip-rule="evenodd" fill-rule="evenodd" />
+    </clipPath>
+  </defs>
+  <g id="编组-4">
+    <g id="编组-3">
+      <g id="编组-2">
+        <g id="编组">
+          <g id="女裝" clip-path="url(#clip_1)">
+            <g id="女裝" fill="#2196F3" filter="url(#filter_1)">
+              <use xlink:href="#path_1" fill="none" stroke="#FFFFFF" stroke-width="4" />
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
