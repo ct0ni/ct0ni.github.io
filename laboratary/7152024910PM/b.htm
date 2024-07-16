@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time-Based Background Change</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            transition: background-color 0.5s ease;
+        }
+        .container {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Current Background Time Change Value</h1>
+        <p id="timechange"></p>
+    </div>
+
+    <script>
+        function getTimeChange() {
+            const now = new Date();
+            const hours = now.getHours();
+            const minutes = now.getMinutes();
+            const seconds = now.getSeconds();
+
+            const t = 3600 * hours + 60 * minutes + seconds;
+
+            let background = { timechange: 0 };
+
+            if (t >= (3600 * 7 + 60 * 30) && t <= (3600 * 15 + 60 * 30)) {
+                if (t > (3600 * 8 + 60 * 30) && t < (3600 * 12 + 60 * 30) || 
+                    t > (3600 * 13 + 60 * 30) && t < (3600 * 14 + 60 * 30)) {
+                    background.timechange = 1;
+                }
+            } else {
+                background.timechange = 0;
+            }
+
+            return background.timechange;
+        }
+
+        function updateBackground() {
+            const timechange = getTimeChange();
+            const body = document.body;
+            const timeChangeElement = document.getElementById('timechange');
+
+            timeChangeElement.textContent = timechange;
+
+            if (timechange === 1) {
+                body.style.backgroundColor = '#ff6347'; // 背景颜色为红色
+            } else {
+                body.style.backgroundColor = '#87ceeb'; // 背景颜色为蓝色
+            }
+        }
+
+        // 初始调用更新背景颜色
+        updateBackground();
+
+        // 每分钟更新一次背景颜色
+        setInterval(updateBackground, 60000);
+    </script>
+</body>
+</html>

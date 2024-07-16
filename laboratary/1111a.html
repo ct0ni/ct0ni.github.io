@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CTTR的实验室</title>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        transition: background-color 0.5s ease;
+    }
+    .content {
+        width: 60%;
+        background-color: rgba(0, 0, 0, 0.4);
+        padding: 20px;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start; /* Adjust alignment */
+    }
+    .left {
+        width: 40%;
+        padding: 10px;
+    }
+    .left img {
+        width: 100%;
+        border-radius: 10px;
+    }
+    .right {
+        width: 60%;
+        padding: 10px;
+    }
+    .greeting {
+        margin-bottom: 20px;
+    }
+    .buttons {
+        display: flex;
+        flex-direction: column; /* Change to column */
+        gap: 10px; /* Space between buttons */
+    }
+    .button {
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+    .button:hover {
+        background-color: #45a049;
+    }
+    .footer {
+        background-color: #333; /* 深灰色背景 */
+        color: white;
+        text-align: center;
+        padding: 20px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        transition: transform 0.3s ease; /* 添加动画效果 */
+        transform: translateY(100%);
+    }
+
+    .footer:hover {
+        transform: translateY(0); /* 鼠标悬停时显示 */
+    }
+</style>
+</head>
+<script>
+    function getTimeChange() {
+        const now = new Date();
+        const hours = now.getHours();
+        const minutes = now.getMinutes();
+        const seconds = now.getSeconds();
+
+        const t = 3600 * hours + 60 * minutes + seconds;
+
+        let background = { timechange: 0 };
+
+        if (t >= (3600 * 7 + 60 * 30) && t <= (3600 * 15 + 60 * 30)) {
+            if (t > (3600 * 8 + 60 * 30) && t < (3600 * 12 + 60 * 30) || 
+                t > (3600 * 13 + 60 * 30) && t < (3600 * 14 + 60 * 30)) {
+                background.timechange = 1;
+            }
+        } else {
+            background.timechange = 0;
+        }
+
+        return background.timechange;
+    }
+
+    function updateBackground() {
+        const timechange = getTimeChange();
+        const body = document.body;
+        const timeChangeElement = document.getElementById('timechange');
+
+        timeChangeElement.textContent = timechange;
+
+        if (timechange === 1) {
+            body.style.backgroundColor = '#33cc99';
+        } else {
+            body.style.backgroundColor = '#9922ee';
+        }
+    }
+
+    // 初始调用更新背景颜色
+    updateBackground();
+
+    // 每分钟更新一次背景颜色
+    setInterval(updateBackground, 60000);
+</script>
+<body>
+    <div class="content">
+        <div class="left">
+            <img src="myimage.jpg" alt="Your Image">
+        </div>
+        <div class="right">
+            <div class="greeting">
+                <img src="good_morning_image_url" alt="Good Morning">
+            </div>
+            <p>Hello! I am Citemhtira0ni. This is my personal website. You can explore anything you are interested in by clicking on these buttons below.</p>
+            <div class="buttons">
+                <a href="link_to_your_blog" class="button">Mathematics & CS</a>
+                <a href="link_to_your_blog" class="button">Fancy Experiments</a>
+                <a href="link_to_your_blog" class="button">Software</a>
+                <a href="link_to_your_blog" class="button">Articles</a>
+                <a href="link_to_your_blog" class="button">Entertainment</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<footer style="background-color: #333; /* 深灰色背景 */
+color: white;
+text-align: center;
+padding: 20px;
+position: fixed;
+bottom: 0;
+width: 100%;
+transition: transform 0.3s ease; /* 添加动画效果 */
+transform: translateY(100%);">本页面由Citemhtira0ni编写 Citemhtira0ni版权所有</footer>

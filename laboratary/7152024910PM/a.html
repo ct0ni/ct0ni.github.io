@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time-Based Background Change</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Current Background Time Change Value</h1>
+        <p id="timechange"></p>
+    </div>
+
+    <script>
+        function getTimeChange() {
+            const now = new Date();
+            const hours = now.getHours();
+            const minutes = now.getMinutes();
+            const seconds = now.getSeconds();
+
+            const t = 3600 * hours + 60 * minutes + seconds;
+
+            let background = { timechange: 0 };
+
+            if (t >= (3600 * 7 + 60 * 30) && t <= (3600 * 15 + 60 * 30)) {
+                if (t > (3600 * 8 + 60 * 30) && t < (3600 * 12 + 60 * 30) || 
+                    t > (3600 * 13 + 60 * 30) && t < (3600 * 14 + 60 * 30)) {
+                    background.timechange = 1;
+                }
+            } else {
+                background.timechange = 0;
+            }
+
+            return background.timechange;
+        }
+
+        document.getElementById('timechange').textContent = getTimeChange();
+    </script>
+</body>
+</html>
