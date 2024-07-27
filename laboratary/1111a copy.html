@@ -12,6 +12,7 @@
         height: 100vh;
         margin: 0;
         transition: background-color 0.5s ease;
+        background-color: #9922ee; /* 默認背景色 */
     }
     .content {
         width: 60%;
@@ -20,7 +21,7 @@
         border-radius: 20px;
         display: flex;
         flex-direction: row;
-        align-items: flex-start; /* Adjust alignment */
+        align-items: flex-start;
     }
     .left {
         width: 40%;
@@ -39,8 +40,8 @@
     }
     .buttons {
         display: flex;
-        flex-direction: column; /*豎着放*/
-        gap: 10px; /*按鈕間距*/
+        flex-direction: column;
+        gap: 10px;
     }
     .button {
         padding: 10px 20px;
@@ -56,64 +57,21 @@
         background-color: #F8C833;
     }
     .footer {
-        background-color: #333; /* 深灰色背景 */
+        background-color: #333;
         color: white;
         text-align: center;
         padding: 20px;
         position: fixed;
         bottom: 0;
         width: 100%;
-        transition: transform 0.3s ease; /* 添加动画效果 */
+        transition: transform 0.3s ease;
         transform: translateY(100%);
     }
 
     .footer:hover {
-        transform: translateY(0); /* 鼠标悬停时显示 */
+        transform: translateY(0);
     }
 </style>
-<script>
-    function getTimeChange() {
-        const now = new Date();
-        const hours = now.getHours();
-        const minutes = now.getMinutes();
-        const seconds = now.getSeconds();
-
-        const t = 3600 * hours + 60 * minutes + seconds;
-
-        let background = { timechange: 0 };
-
-        if (t >= (3600 * 7 + 60 * 30) && t <= (3600 * 15 + 60 * 30)) {
-            if (t > (3600 * 8 + 60 * 30) && t < (3600 * 12 + 60 * 30) || 
-                t > (3600 * 13 + 60 * 30) && t < (3600 * 14 + 60 * 30)) {
-                background.timechange = 1;
-            }
-        } else {
-            background.timechange = 0;
-        }
-
-        return background.timechange;
-    }
-
-    function updateBackground() {
-        const timechange = getTimeChange();
-        const body = document.body;
-        const timeChangeElement = document.getElementById('timechange');
-
-        timeChangeElement.textContent = timechange;
-
-        if (timechange === 1) {
-            body.style.backgroundColor = '#33cc99';
-        } else {
-            body.style.backgroundColor = '#9922ee';
-        }
-    }
-
-    // 初始调用更新背景颜色
-    updateBackground();
-
-    // 每分钟更新一次背景颜色
-    setInterval(updateBackground, 60000);
-</script>
 </head>
 <body>
     <div class="content">
@@ -126,7 +84,7 @@
             </div>
             <p>Hello! I am Citemhtira0ni. This is my personal website. You can explore anything you are interested in by clicking on these buttons below.</p>
             <div class="buttons">
-                <a href="l..//academic/academic.html" class="button">Mathematics & Computer</a>
+                <a href="..//academic/academic.html" class="button">Mathematics & Computer</a>
                 <a href="..//experiment/experiment.html" class="button">Fancy Experiments</a>
                 <a href="..//software/software.html" class="button">Software</a>
                 <a href="..//gallery/gallery.html" class="button">Gallery</a>
@@ -134,14 +92,51 @@
             </div>
         </div>
     </div>
+
+    <script>
+        function getTimeChange() {
+            const now = new Date();
+            const hours = now.getHours();
+            const minutes = now.getMinutes();
+            const seconds = now.getSeconds();
+
+            const t = 3600 * hours + 60 * minutes + seconds;
+
+            let background = { timechange: 0 };
+
+            console.log(`Current time: ${hours}:${minutes}:${seconds}`);
+            console.log(`Total seconds: ${t}`);
+
+            if (t >= (3600 * 7 + 60 * 30) && t <= (3600 * 15 + 60 * 30)) {
+                if (t > (3600 * 8 + 60 * 30) && t < (3600 * 12 + 60 * 30) || 
+                    t > (3600 * 13 + 60 * 30) && t < (3600 * 14 + 60 * 30)) {
+                    background.timechange = 1;
+                }
+            } else {
+                background.timechange = 0;
+            }
+
+            console.log(`Time change: ${background.timechange}`);
+            return background.timechange;
+        }
+
+        function updateBackground() {
+            const timechange = getTimeChange();
+            const body = document.body;
+
+            console.log(`Updating background: ${timechange}`);
+
+            if (timechange === 1) {
+                body.style.backgroundColor = '#33cc99';
+            } else {
+                body.style.backgroundColor = '#9922ee';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            updateBackground();
+            setInterval(updateBackground, 60000);
+        });
+    </script>
 </body>
 </html>
-<footer style="background-color: #333; /* 深灰色背景 */
-color: white;
-text-align: center;
-padding: 20px;
-position: fixed;
-bottom: 0;
-width: 100%;
-transition: transform 0.3s ease; /* 添加动画效果 */
-transform: translateY(100%);">本页面由Citemhtira0ni编写 Citemhtira0ni版权所有</footer>
