@@ -1,63 +1,144 @@
 <!DOCTYPE html>
-<meta charset="UTF-8">
 <html lang="cn">
-
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Citemhtira0ni's Blog</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="ico/iconAround.svg">
-<!--    <link rel="stylesheet" href="./js/meme.css">
-    <link rel="stylesheet" href="./css/sweet-alert.css">-->
-    <meta name="robots" content="noindex,nofollow">
-    <script src="./js/jquery.min.js"></script>
-    <!--Otomads Hub Official Website-->
-    <style>
-        html {
-            filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
-            -webkit-filter: grayscale(0%);
-        }
-    </style>
-    <!--<script type="text/javascript" charset="utf-8" src="./js/L2Dwidget.0.min.js"></script>
-    <script type="text/javascript" charset="utf-8" src="./js/L2Dwidget.min.js"></script>
-    <script type="text/javascript">
-        L2Dwidget.init({
-            "display": {
-                "superSample": 2,
-                "width": 200,
-                "height": 400,
-                "position": "right",
-                "hOffset": 0,
-                "vOffset": 0
-            }
-        });
-    </script>-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Citemhtira's blog</title>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        transition: background-color 0.5s ease;
+        background-color: #9922ee; /* 默認背景色 */
+    }
+    .content {
+        width: 60%;
+        background-color: rgba(0, 0, 0, 0.4);
+        padding: 20px;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .left {
+        width: 40%;
+        padding: 10px;
+    }
+    .left img {
+        width: 100%;
+        border-radius: 10px;
+    }
+    .right {
+        width: 60%;
+        padding: 10px;
+    }
+    .greeting {
+        margin-bottom: 20px;
+    }
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .button {
+        padding: 10px 20px;
+        background-color: #FAE833;
+        color: black;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        animation-duration: 1s;   
+        animation-name: slidein;
+    }
+    .button:hover {
+        background-color: #F8C833;
+    }
+    .footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        transition: transform 0.3s ease;
+        transform: translateY(100%);
+    }
+
+    .footer:hover {
+        transform: translateY(0);
+    }
+</style>
 </head>
 <body>
-    <header>
-        <h1 class="h" style="position:fixed;z-index:9999;top:0;">
-            <a href="./" class='head' id='logo'>Community</a>
-            <a href="./gallery/blog.html" class="head">博客入口</a>
-        </h1>
-    </header>
-    <h1 class="st">本站板块</h1>
-    <script> function mytime() { var a = new Date(); var b = a.toLocaleTimeString(); var c = a.toLocaleDateString(); document.getElementById("time1").innerHTML = c + "&nbsp" + b; } setInterval(function () { mytime() }, 1000); </script>
-    <!--<iframe class='return' id='homebt' style="position:fixed;z-index:9999;left:10px;bottom:10px;"frameborder="no"marginwidth="0"
-        marginheight="0" width=330 height=86
-        src='./ico/Home-icon.svg'></iframe>
-        上面隐藏的是目前没用的东西-->
-        <section class='intro'>
-            <figure class="hide">
-                <a href="./errorpages/404/.html" target="_blank" ><img src="./picture/QQ图片202406.jpg"
-                        alt="A"></a>
-                <figcaption>板块A</figcaption>
-            </figure>
-        </section>
-</div>
-    <footer>本页面由Citemhtira0ni编写 Citemhtira0ni版权所有
-    </footer>
-    <script src="./js/cursor-effects.js"></script>
-</body>
+    <div class="content">
+        <div class="left">
+            <img src="myimage.jpg" alt="welcome">
+        </div>
+        <div class="right">
+            <div class="greeting">
+                <img src="good_morning_image_url" alt="Good Morning">
+            </div>
+            <p>Hello! I am Citemhtira0ni. This is my personal website. You can explore anything you are interested in by clicking on these buttons below.</p>
+            <div class="buttons">
+                <a href="./academic/academic.html" class="button">Mathematics & Computer</a>
+                <a href="./experiment/experiment.html" class="button">Fancy Experiments</a>
+                <a href="./software/software.html" class="button">Software</a>
+                <a href="./gallery/gallery.html" class="button">Gallery</a>
+                <a href="./entertainment/entertainment.html" class="button">Entertainment</a>
+            </div>
+        </div>
+    </div>
 
+    <script>
+        function getTimeChange() {
+            const now = new Date();
+            const hours = now.getHours();
+            const minutes = now.getMinutes();
+            const seconds = now.getSeconds();
+
+            const t = 3600 * hours + 60 * minutes + seconds;
+
+            let background = { timechange: 0 };
+
+            console.log(`Current time: ${hours}:${minutes}:${seconds}`);
+            console.log(`Total seconds: ${t}`);
+
+            if (t >= (3600 * 7 + 60 * 30) && t <= (3600 * 15 + 60 * 30)) {
+                if (t > (3600 * 8 + 60 * 30) && t < (3600 * 12 + 60 * 30) || 
+                    t > (3600 * 13 + 60 * 30) && t < (3600 * 14 + 60 * 30)) {
+                    background.timechange = 1;
+                }
+            } else {
+                background.timechange = 0;
+            }
+
+            console.log(`Time change: ${background.timechange}`);
+            return background.timechange;
+        }
+
+        function updateBackground() {
+            const timechange = getTimeChange();
+            const body = document.body;
+
+            console.log(`Updating background: ${timechange}`);
+
+            if (timechange === 1) {
+                body.style.backgroundColor = '#33cc99';
+            } else {
+                body.style.backgroundColor = '#9922ee';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            updateBackground();
+            setInterval(updateBackground, 60000);
+        });
+    </script>
+</body>
 </html>
