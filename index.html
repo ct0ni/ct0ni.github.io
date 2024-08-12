@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Citemhtira's blog</title>
+<title>citemhtira's blog</title>
+
 <style>
     body {
         display: flex;
@@ -12,7 +13,7 @@
         height: 100vh;
         margin: 0;
         transition: background-color 0.5s ease;
-        background-color: #9922ee; /* 默認背景色 */
+        background-color: #ffffff; /* 默認背景色 */
     }
     .content {
         width: 60%;
@@ -84,9 +85,9 @@
             <div class="greeting">
                 <img src="good_morning_image_url" alt="Good Morning">
             </div>
-            <p>Hello! I am Citemhtira0ni. This is my personal website. You can explore anything you are interested in by clicking on these buttons below.</p>
+            <p>Hello! I am citemhtira. This is my personal website. You can explore anything you are interested in by clicking on these buttons below.</p>
             <div class="buttons">
-                <a href="./academic/academic.html" class="button">Mathematics & Computer</a>
+                <a href="./academic/academic.html" class="button">Academic & Sth. Interesting</a>
                 <a href="./experiment/experiment.html" class="button">Fancy Experiments</a>
                 <a href="./software/software.html" class="button">Software</a>
                 <a href="./gallery/gallery.html" class="button">Gallery</a>
@@ -95,7 +96,7 @@
         </div>
     </div>
 
-    <script>
+    <!--<script>
         function getTimeChange() {
             const now = new Date();
             const hours = now.getHours();
@@ -129,12 +130,87 @@
             console.log(`Updating background: ${timechange}`);
 
             if (timechange === 1) {
-                body.style.backgroundColor = '#33cc99';
+                body.style.backgroundColor = '#FFFFFF';
             } else {
                 body.style.backgroundColor = '#9922ee';
             }
         }
 
+        document.addEventListener('DOMContentLoaded', (event) => {
+            updateBackground();
+            setInterval(updateBackground, 60000);
+        });
+    </script>-->
+
+    <script>
+        function getTimeChange() {
+            const now = new Date();
+            const hours = now.getHours();
+            const minutes = now.getMinutes();
+            const seconds = now.getSeconds();
+    
+            const t = 3600 * hours + 60 * minutes + seconds;
+    
+            let background = { timechange: 0 };
+    
+            console.log(`Current time: ${hours}:${minutes}:${seconds}`);
+            console.log(`Total seconds: ${t}`);
+    
+            if (t >= (3600 * 7 + 60 * 30) && t <= (3600 * 15 + 60 * 30)) {
+                if (t > (3600 * 8 + 60 * 30) && t < (3600 * 12 + 60 * 30) || 
+                    t > (3600 * 13 + 60 * 30) && t < (3600 * 14 + 60 * 30)) {
+                    background.timechange = 1;
+                }
+            } else {
+                background.timechange = 0;
+            }
+            console.log(`Time change: ${background.timechange}`);
+            return background.timechange;
+        }
+    
+        function updateBackground() {
+            const timechange = getTimeChange();
+            const body = document.body;
+    
+            console.log(`Updating background: ${timechange}`);
+    
+            if (timechange === 1) {
+                anime({
+                    targets: 'body',
+                    backgroundColor: [
+                        { value: '#C6EFFF' }, // 浅色背景
+                        { value: '#B2DBFF' }, // 深蓝绿色背景
+                        { value: '#FCFFFE' }  // 回到浅色背景
+                    ],
+                    duration: 90000, // 动画持续时间（10秒）
+                    direction: 'alternate', // 来回交替
+                    easing: 'easeInOutSine', // 平滑的缓和函数
+                    loop: true // 循环渐变
+                });
+                body.style.color = '#004d40'; // 深色字体
+            } else {
+                anime({
+                    targets: 'body',
+                    backgroundColor: [
+                        { value: '#FF8D30' }, // 浅色背景
+                        { value: '#6a0dad' }, // 深紫色背景
+                        { value: '#9922ee' }  // 回到浅色背景
+                    ],
+                    duration: 90000, // 动画持续时间（10秒）
+                    direction: 'alternate', // 来回交替
+                    easing: 'easeInOutSine', // 平滑的缓和函数
+                    loop: true // 循环渐变
+                });
+                body.style.color = '#ffffff'; // 浅色字体
+            }
+    
+            /*if (timechange === 1) {
+                body.style.backgroundColor = '#33cc99';
+            } else {
+                body.style.backgroundColor = '#9922ee';
+            }*/
+        }
+    
         document.addEventListener('DOMContentLoaded', (event) => {
             updateBackground();
             setInterval(updateBackground, 60000);
